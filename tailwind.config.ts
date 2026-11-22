@@ -1,16 +1,9 @@
 import type { Config } from 'tailwindcss';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const config: Config = {
   content: [
-    join(__dirname, 'index.html'),
-    join(__dirname, 'src/**/*.{ts,tsx}'),
     './index.html',
-    './src/**/*.{ts,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
