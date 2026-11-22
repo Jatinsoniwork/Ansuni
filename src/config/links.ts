@@ -36,12 +36,17 @@ export const SOCIAL_LINKS = {
 export const ATTEND_EPISODE_CONFIG: {
   googleFormUrl: string | null;
   statusLabel: string;
-  unconfiguredMessage: string;
+  headline: string;
+  description: string;
+  instruction: string;
 } = {
   googleFormUrl: null,
-  statusLabel: 'Registration Opening Soon',
-  unconfiguredMessage:
-    'The official Google Form to attend a live ANSUNI recording has not been linked yet. Follow @ansuni_unsaid on Instagram or message us on WhatsApp to be notified as soon as studio seats open.',
+  statusLabel: 'Live Studio Audience',
+  headline: 'Attend a Live Recording',
+  description:
+    'Experience the raw emotion and human perspectives in person. DM us to be an attendee for upcoming live ANSUNI studio sessions.',
+  instruction:
+    'Send us a direct message on Instagram or WhatsApp with your name and city to reserve your attendee seat.',
 };
 
 export interface NavItem {

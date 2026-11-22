@@ -116,37 +116,40 @@ export function AttendEpisodeButton({
                     id="attend-episode-modal-title"
                     className="font-editorial text-3xl font-light tracking-tight text-cream sm:text-4xl"
                   >
-                    Attend a Live Recording
+                    {ATTEND_EPISODE_CONFIG.headline}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-relaxed text-ivory/75">
-                    {ATTEND_EPISODE_CONFIG.unconfiguredMessage}
+                  <p className="mt-4 text-sm leading-relaxed text-ivory/85 sm:text-base">
+                    {ATTEND_EPISODE_CONFIG.description}
                   </p>
 
-                  <div className="mt-5 border-l border-ivory/25 pl-4 font-mono text-[11px] leading-relaxed text-taupe">
-                    Destination status: Google Form URL not yet configured. Once added in{' '}
-                    <span className="text-ivory/90">src/config/links.ts</span>, this button
-                    redirects directly to the form.
+                  <div className="mt-5 border-l-2 border-ivory/60 bg-ivory/5 p-4 text-xs leading-relaxed">
+                    <p className="font-mono text-[11px] uppercase tracking-editorial text-ivory font-semibold">
+                      DM for being an attendee
+                    </p>
+                    <p className="mt-1.5 text-taupe text-xs">
+                      {ATTEND_EPISODE_CONFIG.instruction}
+                    </p>
                   </div>
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                     <a
-                      href={SOCIAL_LINKS.whatsapp.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-2.5 bg-ivory px-5 py-3 text-xs uppercase tracking-editorial text-midnight transition-opacity hover:opacity-90"
-                    >
-                      <WhatsAppIcon className="h-4 w-4" />
-                      <span>WhatsApp Us</span>
-                    </a>
-                    <a
                       href={SOCIAL_LINKS.instagram.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-2.5 border border-ivory/30 px-5 py-3 text-xs uppercase tracking-editorial text-ivory transition-colors hover:border-ivory hover:bg-ivory/5"
+                      className="inline-flex flex-1 items-center justify-center gap-2.5 bg-ivory px-5 py-3.5 text-xs font-medium uppercase tracking-editorial text-midnight transition-all hover:bg-cream hover:shadow-lg"
                     >
                       <InstagramIcon className="h-4 w-4" />
-                      <span>Follow Instagram</span>
+                      <span>DM on Instagram</span>
+                    </a>
+                    <a
+                      href={SOCIAL_LINKS.whatsapp.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex flex-1 items-center justify-center gap-2.5 border border-ivory/30 px-5 py-3.5 text-xs uppercase tracking-editorial text-ivory transition-colors hover:border-ivory hover:bg-ivory/10"
+                    >
+                      <WhatsAppIcon className="h-4 w-4" />
+                      <span>Message on WhatsApp</span>
                     </a>
                   </div>
                 </motion.div>
